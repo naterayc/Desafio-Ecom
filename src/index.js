@@ -10,64 +10,39 @@ const containerCalendar = document.querySelector('.container-calendar');
 const containerConfig = document.querySelector('.container-config');
 
 import {
+    activeBtnCalendar,
+    activeBtnConfig,
+    activeBtnEmployee,
+    activeBtnReports,
     darkMode,
+    hideOthers,
     showEmployees
 } from './functions.js';
 
 btnEmployees.addEventListener('click', () => {
-    containerAux.classList.add('hide');
     if (document.querySelector('.container').childNodes.length === 0) {
         showEmployees();
     }
-    btnEmployees.classList.add('active');
-    btnReports.classList.remove('active');
-    btnCalendar.classList.remove('active');
-    btnConfig.classList.remove('active');
+    activeBtnEmployee();
+    hideOthers();
     containerEmployees.classList.remove('hide');
-    containerReports.classList.add('hide');
-    containerCalendar.classList.add('hide');
-    containerConfig.classList.add('hide');
 });
 
 btnReports.addEventListener('click', () => {
-    containerAux.classList.add('hide');
-    if (document.querySelector('.container').childNodes.length !== 0) {
-        containerEmployees.classList.add('hide');
-    }
-    btnReports.classList.add('active');
-    btnEmployees.classList.remove('active');
-    btnCalendar.classList.remove('active');
-    btnConfig.classList.remove('active');
+    activeBtnReports();
+    hideOthers();
     containerReports.classList.remove('hide');
-    containerCalendar.classList.add('hide');
-    containerConfig.classList.add('hide');
 })
 
 btnCalendar.addEventListener('click', () => {
-    containerAux.classList.add('hide');
-    if (document.querySelector('.container').childNodes.length !== 0) {
-        containerEmployees.classList.add('hide');
-    }
-    btnCalendar.classList.add('active');
-    btnEmployees.classList.remove('active');
-    btnReports.classList.remove('active');
-    btnConfig.classList.remove('active');
-    containerReports.classList.add('hide');
-    containerConfig.classList.add('hide');
-    containerCalendar.classList.remove('hide');
+    activeBtnCalendar();
+    hideOthers();
+    containerCalendar.classList.remove('hide');  
 })
 
 btnConfig.addEventListener('click', () => {
-    containerAux.classList.add('hide');
-    if (document.querySelector('.container').childNodes.length !== 0) {
-        containerEmployees.classList.add('hide');
-    }
-    btnConfig.classList.add('active');
-    btnEmployees.classList.remove('active');
-    btnReports.classList.remove('active');
-    btnCalendar.classList.remove('active');
-    containerReports.classList.add('hide');
-    containerCalendar.classList.add('hide');
+    activeBtnConfig();
+    hideOthers();
     containerConfig.classList.remove('hide');
 })
 
