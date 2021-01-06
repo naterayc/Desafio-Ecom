@@ -36,7 +36,9 @@ header>h1{
     background-color: rgb(122 128 164);
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 47%;
+    height: 3.75rem;
     max-height: 5rem;
     padding: 2%;
     box-sizing: border-box;
@@ -46,6 +48,7 @@ header>h1{
 
 .btn-container > div > svg {
     width:20%;
+    height: 2.5rem;
 }
 
 .btn-container > div > svg .cls-1{
