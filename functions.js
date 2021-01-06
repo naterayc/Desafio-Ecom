@@ -8,7 +8,7 @@ const showEmployees = () => {
         method: 'GET',
         mode: 'cors',
         credentials: 'omit',
-        referrerPolicy: 'no-referrer'
+        referrerPolicy: 'no-referrer',
     });
     fetch(request)
         .then(response => response.json())
@@ -67,44 +67,6 @@ const showEmployees = () => {
             })
         })
 }
-
-/* const btnEmployees = document.querySelector('#employees');
-const btnReports = document.querySelector('#reports');
-const btnCalendar = document.querySelector('#calendar');
-const btnConfig = document.querySelector('#config');
-
-const removeClass = () => {
-    const btnReportsClass = btnReports.classList[1];
-    const btnCalendarClass = btnCalendar.classList[1];
-    const btnConfigClass = btnConfig.classList[1];
-    const btnEmployeesClass = btnEmployees.classList[1];
-
-    if ([btnReportsClass, btnCalendarClass, btnConfigClass].includes('active')){        
-        btnReports.classList.remove('active');
-        btnCalendar.classList.remove('active');
-        btnConfig.classList.remove('active');
-        console.log('lala')
-    } 
-    if([btnEmployeesClass, btnCalendarClass, btnConfigClass].includes('active')){
-        btnEmployees.classList.remove('active');
-        btnCalendar.classList.remove('active');
-        btnConfig.classList.remove('active');
-        console.log('lala')
-    }
-    if([btnEmployeesClass, btnReportsClass, btnConfigClass].includes('active')){
-        btnEmployees.classList.remove('active');
-        btnReports.classList.remove('active');
-        btnConfig.classList.remove('active');
-        console.log('lala')
-    }
-    if([btnEmployeesClass, btnReportsClass, btnCalendarClass].includes('active')){
-        btnEmployees.classList.remove('active');
-        btnReports.classList.remove('active');
-        btnCalendar.classList.remove('active');
-        console.log('lala')
-    }
-    
-} */
 
 const btnDarkMode = document.querySelector('#dark-mode');
 
