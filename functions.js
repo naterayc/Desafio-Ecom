@@ -3,7 +3,14 @@ const containerEmployees = document.querySelector('.container');
 const modal = document.querySelector('#modal-info');
 
 const showEmployees = () => {
-    fetch('https://randomuser.me/api/?results=20')
+
+    const request = new Request('https://randomuser.me/api/?results=20', {
+        method: 'GET',
+        mode: 'cors',
+        credentials: 'omit',
+        referrerPolicy: 'no-referrer'
+    });
+    fetch(request)
         .then(response => response.json())
         .then(data => users = data.results)
         .then(() => {
