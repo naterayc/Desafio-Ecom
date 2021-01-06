@@ -70,8 +70,9 @@ header>h1{
 }
 
 .container-aux{
-    width:90%;
+    width: 90%;
     margin: auto;
+    text-align: center;
 }
 
 .container-aux > h3 {
@@ -79,6 +80,12 @@ header>h1{
     font-size: 2.5rem;
     color: rgb(53, 52, 52);
     text-align: center;
+}
+
+.container-aux > svg {
+    fill: rgb(207 205 205);
+    width: 50%;
+    height: 12rem;
 }
 
 .container, .container-reports, .container-calendar, .container-config{
@@ -194,7 +201,6 @@ header>h1{
 /* config */
 .container-config .btn svg{
     width: 18%;
-    margin-top: 1%;
     fill: #fff;
 }
 
@@ -292,19 +298,20 @@ header>h1{
         margin: 1% auto;
         padding: 0;
     }
-
-    .container{
+    .container-config .btn svg{
+        height: 2.5rem;
+        margin-top: 0;
+    }
+    .container, .container-calendar, .container-reports{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
     }
-
-    .container .box{
+    .container .box, .container-calendar .box, .container-reports .box{
         width:48%;
         margin: 2% 0 0;
         height: 6.875rem;
     }
-
     .avatar{
         width: 14%;
     }
