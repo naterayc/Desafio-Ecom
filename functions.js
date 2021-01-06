@@ -59,7 +59,6 @@ const showEmployees = () => {
                     });
                 };
 
-                // mostrar modal al hacer click
                 box.addEventListener('click', () => {
                     showInfo(user);
                     modal.classList.remove('hide');
@@ -76,13 +75,89 @@ const darkMode = () => {
         document.querySelector('body').style.backgroundColor = "rgb(53, 52, 52)";
         document.querySelector('body').style.color = "#fff";
     } else {
-    btnDarkMode.classList.remove('active');
-    document.querySelector('body').style.backgroundColor = "";
-    document.querySelector('body').style.color = "rgb(63, 63, 63)";
+        btnDarkMode.classList.remove('active');
+        document.querySelector('body').style.backgroundColor = "";
+        document.querySelector('body').style.color = "rgb(63, 63, 63)";
+    }
+}
+
+const btnEmployees = document.querySelector('#employees');
+const btnReports = document.querySelector('#reports');
+const btnCalendar = document.querySelector('#calendar');
+const btnConfig = document.querySelector('#config');
+
+const activeBtnEmployee = () => {
+    btnEmployees.classList.add('active');
+    btnReports.classList.remove('active');
+    btnCalendar.classList.remove('active');
+    btnConfig.classList.remove('active');
+}
+
+const activeBtnReports = () => {
+    btnReports.classList.add('active');
+    btnEmployees.classList.remove('active');
+    btnCalendar.classList.remove('active');
+    btnConfig.classList.remove('active');
+}
+
+const activeBtnCalendar = () => {
+    btnCalendar.classList.add('active');
+    btnEmployees.classList.remove('active');
+    btnReports.classList.remove('active');
+    btnConfig.classList.remove('active');
+}
+
+
+const activeBtnConfig = () => {
+    btnConfig.classList.add('active');
+    btnEmployees.classList.remove('active');
+    btnReports.classList.remove('active');
+    btnCalendar.classList.remove('active');
+}
+
+const containerAux = document.querySelector('.container-aux');
+const containerReports = document.querySelector('.container-reports');
+const containerCalendar = document.querySelector('.container-calendar');
+const containerConfig = document.querySelector('.container-config');
+
+const hideOthers = () => {
+    const reportsChild = containerReports.childNodes.length;
+    const calendarChild = containerCalendar.childNodes.length;
+    const configChild = containerConfig.childNodes.length;
+    const employeesChild = containerEmployees.childNodes.length;
+
+    if (reportsChild != 0 || calendarChild != 0 || configChild != 0) {
+        containerAux.classList.add('hide');
+        containerReports.classList.add('hide');
+        containerCalendar.classList.add('hide');
+        containerConfig.classList.add('hide');
+    }
+    if (employeesChild != 0 || calendarChild != 0 || configChild != 0) {
+        containerEmployees.classList.add('hide');
+        containerAux.classList.add('hide');
+        containerCalendar.classList.add('hide');
+        containerConfig.classList.add('hide');
+    }
+    if (employeesChild != 0 || reportsChild != 0 || configChild != 0) {
+        containerEmployees.classList.add('hide');
+        containerAux.classList.add('hide');
+        containerReports.classList.add('hide');
+        containerConfig.classList.add('hide');
+    }
+    if (employeesChild != 0 || reportsChild != 0 || calendarChild != 0) {
+        containerEmployees.classList.add('hide');
+        containerAux.classList.add('hide');
+        containerReports.classList.add('hide');
+        containerCalendar.classList.add('hide');
     }
 }
 
 export {
     darkMode,
-    showEmployees
+    showEmployees,
+    activeBtnEmployee,
+    activeBtnReports,
+    activeBtnCalendar,
+    activeBtnConfig, 
+    hideOthers
 }
