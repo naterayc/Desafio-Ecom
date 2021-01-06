@@ -1,0 +1,300 @@
+body{
+    margin:0;
+    color:rgb(63, 63, 63);
+}
+
+/* Header */
+header{
+    background-color: rgb(52, 60, 107);
+    margin:0;
+    height: 80px;
+    padding: 5% 0;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+header>h1{
+    margin:0 auto;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 2.5rem;
+    color:#fff;
+    text-align: center;
+}
+
+/* buttons */
+.btn-container{
+    width:100%;
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 3% 2%;
+    box-sizing: border-box;
+}
+
+.btn{
+    background-color: rgb(122 128 164);
+    display: flex;
+    justify-content: center;
+    width: 47%;
+    max-height: 5rem;
+    padding: 2%;
+    box-sizing: border-box;
+    margin: 2% 0;
+    border-radius: .5rem;
+}
+
+.btn-container > div > svg {
+    width:20%;
+}
+
+.btn-container > div > svg .cls-1{
+    fill:#fff;
+}
+
+.btn-container > div > p {
+    font-family: 'Work sans', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    width:70%;
+    padding-left:5%;
+    color:#fff;
+}
+
+/* auxiliar classes */
+.active{
+ background-color:rgb(52, 60, 107);
+}
+
+.hide{
+    display: none;
+}
+
+.container-aux{
+    width:90%;
+    margin: auto;
+}
+
+.container-aux > h3 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 2.5rem;
+    color: rgb(53, 52, 52);
+    text-align: center;
+}
+
+.container, .container-reports, .container-calendar, .container-config{
+    padding: 0 5% 5%;
+}
+
+/* employees */
+.box{
+    width:100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    border: rgb(184, 182, 182) solid .5px;
+    border-radius: 5px;
+    margin: 2% 0;
+}
+
+.box>p{
+    font-family: 'Work sans', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin: 5%;
+}
+
+.avatar{
+    object-fit: contain;
+    border-radius: 25px;
+    margin: 0 5%
+}
+
+.name{
+    font-family: 'Work sans', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-bottom: .5px;
+}
+
+.location{
+    font-family: 'Work sans', sans-serif;
+    font-size: .9rem;
+    margin-top:0;
+}
+
+/* modal employees*/
+
+.hide{
+    display: none;
+}
+
+.modal-info{
+    padding-bottom: 2%;
+    position: absolute;
+}
+
+.box-modal{
+    background-color: rgba(112, 112, 112, 0.7);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 1;
+    box-sizing: border-box;
+    position: fixed;
+}
+
+
+.avatarM{
+    width: 60%;
+    margin: 0;
+    border-radius: 50%;
+}
+ 
+.user{
+    background-color: #fff;
+    width: 80%;
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    padding: 0% 0% 5% 0%;
+    border-radius: 5%; 
+    margin: auto;
+    height: fit-content;
+}
+  
+.close{
+    text-align: center;
+    color: rgb(52, 60, 107);
+    font-size: 2.2rem;
+    cursor: pointer;
+    align-self: flex-end;
+    margin: 3% 3% 0% 0%;
+    border-radius: 15%;
+    width: 9%;
+}
+
+.name-modal{
+    font-family: 'Work sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color:rgb(52, 60, 107);
+}
+
+.info-modal{
+    width:80%;
+    text-align: left;
+    font-family: 'Work sans', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color:rgb(26, 26, 26);
+}
+
+.info-modal>p{
+    margin: 2%;
+}
+
+/* config */
+.container-config .btn svg{
+    width: 18%;
+    margin-top: 1%;
+    fill: #fff;
+}
+
+.container-config > div > p{
+    font-family: 'Work sans', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    width:70%;
+    padding-left:5%;
+    color:#fff;
+}
+
+@media (min-width:750px){
+    header{
+        padding: 3% 0;
+    }
+
+    /* employee */
+    .btn{
+        cursor: pointer;
+    }
+    .btn-container > div > p{
+        font-size: 1.5rem;
+        margin: auto;
+    }
+    .avatar{
+        border-radius: 35px;
+        width: 9%;
+        max-width: 71px;
+    }
+    .name{
+        font-size: 1.5rem;
+        margin: auto;
+    }
+    .location{
+        font-size: 1.2rem;
+        margin: 0;
+    }
+    .user{
+        width: 65%;
+    }
+    .avatarM{
+        width:40%;
+        max-width: 300px;
+    }
+    .name-modal{
+        font-size: 1.5rem;
+    }
+    .info-modal{
+        font-size: 1.3rem;
+    }
+
+    /* reports, calendar */
+    .box>p{
+        font-size: 1.5rem;
+    }
+
+    /* config */
+    .container-config > div > p{
+        font-size: 1.5rem;
+        margin: 2% 0;
+    }
+}
+
+@media(min-width:1025px){
+    header{
+        padding: 2% 0;
+    }
+    /* buttons */
+    .btn-container{
+        flex-wrap: nowrap;
+    }
+    .btn{
+        width: 24%;
+        padding: 1%;
+    }
+
+    /* config */
+    .container-config .btn{
+        width:26%;
+        margin:auto;
+    }
+
+    /* employee */
+
+    .user{
+        width:50%;
+        max-width: 720px;
+    }
+}
+
+@media(min-width:1400px){
+    .btn-container, .container, .container-config, .container-calendar{
+        max-width: 1250px;
+        margin: auto;
+        padding: 0;
+    }
+}
